@@ -40,9 +40,14 @@ class ArticlesController < ApplicationController
 
 	def destroy
 		@article = Article.find(params[:id])
-		@article.destroy
+		#if article has comment do not destroy, else destroy
+		if @article.comments
+			redirect_to @article
+		else
+			@article.destroy
+		end
 
-		redirect_to articles_path
+		#redirect_to articles_path
 	end
 
 	private
