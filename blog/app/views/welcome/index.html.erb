@@ -1,2 +1,19 @@
-<h1>Hello, Rails!</h1>
+
+
+<body style="background-color:lightyellow;">
+
+<h1><font color="blue"><FONT FACE="arial">Hello! Let's create your very own blog!</FONT></font></h1>
+
+  <h2><FONT FACE="arial">First we need to get some information from you.</FONT></h2>
+
+  <form>
+  <fieldset>
+    Name: <input type=“text”><br>
+    Email: <input type=“text”><br>
+    Date of Birth: <input type=“text”>
+  </fieldset>
+</form> 
+<%= link_to 'Create My Blog', blogs_path %>
 <%= link_to 'My Blog', controller: 'articles' %>
+
+
