@@ -1,19 +1,20 @@
 
 
-<body style="background-color:lightyellow;">
+<body style="background-color:#568F75;">
 
-<h1><font color="blue"><FONT FACE="arial">Hello! Let's create your very own blog!</FONT></font></h1>
+<h1><font face="optima" color="white">Hello! Let's create your blog!</font></h1>
 
-  <h2><FONT FACE="arial">First we need to get some information from you.</FONT></h2>
+  <h2><FONT face="optima" color="white">First we need to get some information from you.</FONT></h2>
 
-  <form>
+  <form method="post">
   <fieldset>
-    Name: <input type=“text”><br>
-    Email: <input type=“text”><br>
-    Date of Birth: <input type=“text”>
+    <font face="optima" color="white">Name:</font><br>
+    <input type=“text” name="fullname" size="29">
+    <br>
+    <font face="optima" color="white">Email:</font><br>
+    <input type=“text” name="email" size="29">
   </fieldset>
-</form> 
-<%= link_to 'Create My Blog', blogs_path %>
-<%= link_to 'My Blog', controller: 'articles' %>
+<input class="MyButton" type="button" value="Create My Blog" onclick="window.location.href='http://localhost:3000/articles'" />
+</form>
 
 
