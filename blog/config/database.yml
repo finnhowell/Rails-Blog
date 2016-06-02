@@ -5,8 +5,8 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
-  #adapter: sqlite3
+  #adapter: postgresql
+  adapter: sqlite3
   pool: 5
   timeout: 5000
 
@@ -19,23 +19,23 @@ default: &default
 development:
   <<: *default
   #adapter: sqlite3
-  #database: db/development.sqlite3
-  database: my_data_dev
+  database: db/development.sqlite3
+  #database: my_data_dev
   #pool: 5
   #timeout: 5000
 
 test:
   #adapter: sqlite3
   <<: *default
-  #database: db/test.sqlite3
-  database: my_data_test
+  database: db/test.sqlite3
+  #database: my_data_test
   #pool: 5
   #timeout: 5000
 
 production:
   <<: *default
-  #database: db/production.sqlite3
-  database: my_data_prod
+  database: db/production.sqlite3
+  #database: my_data_prod
   #adapter: postgresql
   #database: safe-meadow-79659
   #pool: 5
