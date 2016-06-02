@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-    http_basic_authenticate_with name: "user", password: "secret", except: [:index, :show]
+    #http_basic_authenticate_with name: "user", password: "secret", except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     #if article has comment do not destroy, else destroy
     if @article.comments.length > 0
-      redirect_to articles_path, flash: { some_key: "You can't destroy an article with comments." }
+      redirect_to articles_path, flash: { some_key: "You can't delete an article with comments." }
     else
       @article.destroy
       redirect_to articles_path

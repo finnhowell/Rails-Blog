@@ -1,16 +1,16 @@
-<body style="background-color:#79BEDB;">
+<body style="background-color:white;">
 
 <p>
-  <strong><font size=5><%= @article.title %></font></strong>
+  <strong><font color=#64A5E6 size=5><%= @article.title %></font></strong>
 </p>
  
 <p>
   <%= @article.text %>
 </p>
  
-<h2><font size=4>Comments</font></h2> 
+<h2><font color=#5A5A5A size=4>Comments</font></h2> 
 <%= render @article.comments %>
-<h2><font size=3>Would you like to add a comment?</font></h2>
+<h2><font color=#5A5A5A size=3>Would you like to add a comment?</font></h2>
 <%= render 'comments/form' %>
  
 <%= link_to 'Edit', edit_article_path(@article) %> |
